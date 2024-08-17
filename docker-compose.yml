@@ -1,0 +1,6 @@
+version: '3'
+services:
+  web:
+    image: retoregistry.azurecr.io/nginx-personalizado
+    ports:
+      - "4356:80"
