@@ -1,6 +1,15 @@
-version: '3'
 services:
   web:
     image: retoregistry.azurecr.io/nginx-personalizado
     ports:
       - "4356:80"
+    networks:
+      retos:
+        ipv4_address: 172.20.245.12
+
+networks:
+  retos:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.20.0.0/16
